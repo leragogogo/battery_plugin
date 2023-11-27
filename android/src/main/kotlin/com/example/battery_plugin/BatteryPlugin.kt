@@ -22,10 +22,10 @@ class BatteryPlugin: FlutterPlugin, MethodCallHandler {
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
-    if (call.method == "getPlatformVersion") {
-      result.success("Android ${android.os.Build.VERSION.RELEASE}")
+    if (call.method.equals("getBatteryLevel")) {
+      result.success(99);
     } else {
-      result.notImplemented()
+      result.notImplemented();
     }
   }
 

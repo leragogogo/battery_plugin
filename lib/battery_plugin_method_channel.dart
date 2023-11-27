@@ -9,9 +9,9 @@ class MethodChannelBatteryPlugin extends BatteryPluginPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('battery_plugin');
 
-  @override
+  /*@override
   Future<String?> getPlatformVersion() async {
     final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
-  }
+  }*/
 }
